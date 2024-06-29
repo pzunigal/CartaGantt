@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Carta Gantt</title>
+    <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css">
+    <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Generador de Carta Gantt</h1>
+    <form id="activityForm">
+        <label for="activityName">Nombre de la actividad:</label><br>
+        <input type="text" id="activityName" name="activityName" required><br>
+        <label for="startDate">Fecha de Inicio de la Actividad:</label><br>
+        <input type="date" id="startDate" name="startDate" required><br>
+        <label for="endDate">Fecha de Término de la Actividad:</label><br>
+        <input type="date" id="endDate" name="endDate" required><br>
+        <label for="activityDescription">Descripción de la actividad:</label><br>
+        <textarea id="activityDescription" name="activityDescription" required></textarea><br>
+        <label for="activityType">Tipo de Actividad:</label><br>
+        <select id="activityType" name="activityType">
+            <option value="principal">Principal</option>
+            <option value="subtarea">Subtarea</option>
+        </select><br>
+        <button type="submit">Agregar Actividad</button>
+    </form>
+    <div id="gantt_container"></div>
+    <a id="downloadCSV" download="activities.csv">Descargar CSV</a>
+    <button id="exportImage">Exportar como Imagen</button>
+    <script>
+        src="js/scripts.js"
+    </script>
+</body>
+</html>

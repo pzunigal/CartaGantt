@@ -1,0 +1,11 @@
+#gantt_container {
+    width: 95%;
+    height: 500px;
+    margin-top: 20px;
+}
+.gantt_add {
+display: none !important;
+}
+.gantt_add_button {
+display: none !important;
+}
